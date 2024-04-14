@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+        <title>Signin</title>
+</head>
+
+<body style="background-color: #ffffff">
+    <%- include('./partials/nav.ejs') %> 
+
+        <div class="row justify-content-center mt-4">
+          
+                <div style="background-color: rgb(17, 110, 196);  width: 30rem; box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6); border-radius: 1.5%; align-items: center;padding: 50px;margin: 20px;"
+                    class="card">
+                   
+                        
+                        <img src="../public/images/doctor.png" class="rounded-circle" width="200" alt="Circular Image">
+
+                        <div class="card-body mt-3">
+                            <h5 class="card-title"></h5>
+                            <div text-align: center; class="Send Request Message">
+                                <a class="btn btn-light" href="/doctor/signin" role="button">login as Doctor</a>
+                            </div>
+                        </div>
+
+                        <img src="../public/images/user.jpg" class="rounded-circle" width="200" alt="Circular Image">
+
+                        <div class="card-body mt-3">
+                            <h5 class="card-title"></h5>
+                            <div text-align: center; class="Send Request Message">
+                                <a class="btn btn-light" href="/user/signin" role="button">login as User</a>
+
+                            </div>
+                        </div>
+ 
+
+                   
+                
+                </div>
+            
+        </div>
+
+        <%- include('./partials/script.ejs') %>
+</body>
+
+</html>

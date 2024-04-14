@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+        <title>Home Page</title>
+</head>
+
+<body style="background: rgb(253, 253, 253);">
+    <%- include('./partials/nav.ejs') %>
+        <%- include('./partials/carousel.ejs') %>
+            <div class="container" style="display: flex; align-items: center">
+                <div class="card mt-4"
+                    style="box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); width: 26rem; align-items: center; margin: 0 0 0 100px;  margin:2px;border-radius: 5px;">
+                    <h5 class="card-header"
+                        style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); border-radius: 0;">
+                        Instant AI Prescription</h5>
+                    <div class="card-body" style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); align-items: center;">
+                        <div>
+                            <img src="../public/images/aiDoc.png" alt="..." width="210px">
+                        </div>
+                        <div >
+                            <h5 class="card-title mt-3">Connect to AI virtual assistance </p>
+                                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">General
+                                    Query</button>
+                                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">AI Models</button>
+                        </div>
+
+                        <div class="offcanvas offcanvas-bottom" style="height: 85vh; background: rgb(39, 39, 39);"
+                            tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+                                <button type="button" class="btn-close" style="background-color:rgb(255, 255, 255)"
+                                    data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body small">
+
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action active"
+                                        style="background: rgb(39, 39, 39); border-color:green; border-width: 2px; margin:2px;border-radius: 5px;"
+                                        aria-current="true">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1" style="color: white">Modal 1</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action active"
+                                        style="background: rgb(39, 39, 39); border-color:green; border-width: 2px; margin:2px;border-radius: 5px;">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1" style="color: white">Modal 2</h5>
+                                            <small class="text-body-secondary">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some muted small print.</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action active"
+                                        style="background: rgb(39, 39, 39); border-color:green; border-width: 2px; margin:2px;border-radius: 5px;">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1" style="color: white">Modal 3</h5>
+                                            <small class="text-body-secondary">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some muted small print.</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action active"
+                                        style="background: rgb(39, 39, 39); border-color:green; border-width: 2px; margin:2px;border-radius: 5px;">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1" style="color: white">Modal 4</h5>
+                                            <small class="text-body-secondary">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small class="text-body-secondary">And some muted small print.</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action active"
+                                        style="background: rgb(39, 39, 39); border-color:green; border-width: 2px; margin:2px;border-radius: 5px;">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1" style="color: white">Modal 5</h5>
+                                            <small class="text-body-secondary">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small class="text-body-secondary">And some muted small print.</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <% if (locals.role==='USER' ) { %>
+                    <div class="card mt-4"
+                        style="width: 26rem; box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); align-items: center; margin:2px;border-radius: 5px;
+                        margin:2px;border-radius: 5px;">
+                        <h5 class="card-header"
+                            style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); border-radius: 0;">Consult a
+                            doctor
+                        </h5>
+                        <div class="card-body"
+                            style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); border-radius: 0;">
+                            <div style="padding: 5px 10px 5px 20px ;">
+                                <img src="../public/images/doc.png" alt="..." width="210px">
+                            </div>
+                            <div style="padding: 0 0 0 10px;">
+                                <h5 class="card-title mt-3" style="text-align: center;">Consultation
+                                </h5>
+
+                                <div class="flex-row">
+                                    <a href="/user/doctorList/<%= uid %>" class="btn btn-info mt-3">Get Appointment</a>
+                                    <a href="/user/videoCall/<%= uid %>" class="btn btn-info mt-3">Connect on call</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <% } else if (locals.role==='DOCTOR' ) { %>
+                        <div class="card mt-4"
+                            style="box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); width: 26rem; align-items: center;  margin:2px;border-radius: 5px;">
+                            <h5 class="card-header"
+                                style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); border-radius: 0;">Give
+                                Medications</h5>
+                            <div class="card-body" style="background: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+                                <div style="padding: 5px 10px 5px 5px ;">
+                                    <img src="../public/images/doc.png" alt="..." width="210px">
+                                </div>
+                                <div style="padding: 0 0 0 10px;">
+                                    <h5 class="card-title mt-3">Doctors are considered as God.
+                                    </h5>
+
+                                    <div class="flex-row">
+                                        <a href="/doctor/schedule/?did=<%= locals.did %>&name=<%= locals.name %>&role=<%= locals.role %>"
+                                            class="btn btn-info mt-3">Scheduel Appointment</a>
+                                        <a href="/doctor/videoCall?did<%= did %>&name<%= name %>&role<%= role %>"
+                                            class="btn btn-info mt-3">Connect on call</a>
+                                        <a href="/doctor/requestBlood/<%= did %>" class="btn btn-info mt-3">Connect on
+                                            call</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <% } else { %>
+
+                            <% } %>
+
+
+
+
+                                <div class="card mt-4"
+                                    style="box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); width: 26rem; align-items: center; margin:2px;border-radius: 5px;">
+                                    <h5 class="card-header"
+                                        style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); border-radius: 0;">
+                                        Educational Content</h5>
+                                    <div class="card-body" style="background: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+                                        <div style="padding: 5px 10px 5px 5px ;">
+                                            <img src="../public/images/edu.png" alt="..." width="210px">
+                                        </div>
+                                        <div style="padding: 0 0 0 10px;">
+                                            <h5 class="card-title mt-3">Stay updated. learn everyday
+                                            </h5>
+                                            
+                                                <a  href="#" class="btn btn-info mt-3">Start asking</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+            </div>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+                <%- include('./partials/script.ejs') %>
+</body>
+
+</html>
