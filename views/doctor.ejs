@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head.ejs') %>
+    <title>Doctor List</title>
+</head>
+
+<body style="background-image: '/public/images/bg.jpg';">
+  <%- include('./partials/nav.ejs') %>
+
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <h2>Get any doctor's appointment</h2>
+    </blockquote>
+    
+  </figure>
+    <div style="display:flex; ">
+        <div style="padding: 150px; height: 100%;"></div>
+        <!-- <nav class="nav flex-column px-3 py-3 " style="background-color:rgb(69, 69, 69); width:200px; height: 100vh; box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);">
+          <a class="nav-link active" style="color: antiquewhite;" aria-current="page" href="/">Home</a>
+          <a class="nav-link" style="color: antiquewhite;" href="#">Link1</a>
+          <a class="nav-link" style="color: antiquewhite;" href="#">Link2</a>
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </nav> -->
+ 
+      
+        <div class="container mt-3">
+          <div class="row row-cols-3">
+            <% doctors.forEach(doctor=> { %>
+              <div class="col">
+                <div class="card" style="width: 18rem; margin: 10px; border-color: rgb(255, 255, 255);">
+                  <img src="<%= doctor.profileImageURL %>" class="card-img-top" alt="...">
+                  <div class="card-body" style="background-color: rgb(255, 255, 255);">
+                    <h5 class="card-title">
+                      <%= doctor.doctorName %>
+                    </h5>
+                    <h6 class="card-title">
+                      <%= doctor.speciality %>
+                    </h6>
+
+                    <a href="/user/requestAppointment/<%= doctor._id %>" class="btn btn-danger">Ask for Appointment</a>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+          </div>
+        </div>
+    
+      <div style="padding: 150px;"></div>
+    </div>
+
+
+    <%- include('./partials/script.ejs') %>
+</body>
+
+</html>

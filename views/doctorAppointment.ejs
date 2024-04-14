@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Appointment</title>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+        <% if (locals.user) { %>
+          <div class="mt-4" style="display: flex ;justify-content: center;">
+            <div class="card" style="width: 18rem; align-items: center; border-color: rgb(255, 255, 255);">
+                <img src="<%= doctor.profileImageURL %>" class="card-img-top rounded-circle" width="150" alt="Circular Image">
+                <div class="card-body" style="background-color: rgb(255, 255, 255);">
+                  <h4 class="card-title">
+                    <%= doctor.doctorName %>
+                  </h4>
+                  <h5 class="card-title">
+                    <%= doctor.speciality %>
+                  </h5>
+
+                </div>
+                <form action="/user/requestAppointment/?doctorId=<%= doctor._id %>&userId1=<%= user._id %>&patientName=<%=  %>" method="post">
+                  
+                  <button type="submit" class="btn btn-danger appointment-button">
+                    
+                    Ask for Appointment
+                    
+                  </button>
+                </form>
+              </div>
+            </div>
+           
+
+              <% } %>
+
+
+
+
+              
+             
+    </div>
+    <%- include('./partials/script.ejs') %>
+</body>
+</html>

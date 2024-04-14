@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+        <title>Home Page</title>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+    <%- include('./partials/nav.ejs') %>
+
+            <div class="container mt-3">
+                <div class="row row-cols-4">
+                    <% patients.forEach(patient=> { %>
+                        
+                            <div class="card" style="width: 1000px; height: 65px; border-color: rgb(255, 255, 255);">
+                                <div class="card-body" style="display: flex; background-color: rgb(255, 255, 255);">
+                                    <div style="width: 200px;">
+                                        <h5 class="card-title">
+                                        <%= patient.patientName %>
+                                    </h5>
+                                </div>
+                                
+
+
+                                <div class="container" >
+                                    <form
+                                        action="/doctor/approveAppointment?status=<%= true %>&doctorId=<%=patient.doctorId %>&patientId=<%= patient.patientId %>"
+                                        method="post">
+                                        <h6>
+                                            <label for="datetime" class="form-label">Date and Time(YYYY-MM-DD
+                                                HH:mm):</label>
+                                            <input type="text" name="datetime" id="datetime" class="form-control" required/>
+
+                                        </h6>
+                                        <button id="approve" class="btn btn-success">Approve</button>
+                                        </form>
+                                        <br>
+                                        <form
+                                            action="/doctor/approveAppointment?status=rejected&doctorId=<%=patient.doctorId %>&patientId=<%= patient.patientId %>"
+                                            method="post">
+                                            <button id="reject" class="btn btn-danger">Reject</button>
+
+                                        </form>
+
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+                
+                <% }) %>
+            </div>
+        </div>
+        </div>
+
+
+
+        <%- include('./partials/script.ejs') %>
+</body>
+
+</html>
