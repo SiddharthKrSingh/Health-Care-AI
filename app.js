@@ -43,6 +43,11 @@ app.get("/loginpage",async (req, res) => {
     });
 }); 
 
+app.get("/edu",async (req, res) => { 
+    res.render("educationalContent",{ 
+        user: req.user,
+    });
+}); 
 
 
 app.use("/user", userRoute);

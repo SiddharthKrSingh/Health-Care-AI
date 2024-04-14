@@ -21,9 +21,11 @@
                         </div>
                         <div >
                             <h5 class="card-title mt-3">Connect to AI virtual assistance </p>
-                                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">General
-                                    Query</button>
+                                <!-- <button class="btn btn-info" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#" aria-controls="offcanvasBottom">General
+                                    Query</button> -->
+                                    <a href="http://127.0.0.1:8083" class="btn btn-info mt-3">Chat Bot</a>
+
                                 <button class="btn btn-info" type="button" data-bs-toggle="offcanvas"
                                     data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">AI Models</button>
                         </div>
@@ -38,35 +40,35 @@
                             <div class="offcanvas-body small">
 
                                 <div class="list-group">
-                                    <a href="#" class="list-group-item list-group-item-action active"
+                                    <a href="http://127.0.0.1:8080" class="list-group-item list-group-item-action active"
                                         style="background: rgb(39, 39, 39); border-color:green; border-width: 2px; margin:2px;border-radius: 5px;"
                                         aria-current="true">
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h5 class="mb-1" style="color: white">Modal 1</h5>
-                                            <small>3 days ago</small>
+                                            <h5 class="mb-1" style="color: white">Kidney-CT-Scan</h5>
+                                            <!-- <small>3 days ago</small> -->
                                         </div>
-                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                        <small>And some small print.</small>
+                                        <!-- <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small> -->
                                     </a>
-                                    <a href="#" class="list-group-item list-group-item-action active"
+                                    <a href=" http://127.0.0.1:8081" class="list-group-item list-group-item-action active"
                                         style="background: rgb(39, 39, 39); border-color:green; border-width: 2px; margin:2px;border-radius: 5px;">
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h5 class="mb-1" style="color: white">Modal 2</h5>
-                                            <small class="text-body-secondary">3 days ago</small>
+                                            <h5 class="mb-1" style="color: white">Chest-X-Ray For Pneumonia</h5>
+                                            <!-- <small class="text-body-secondary">3 days ago</small> -->
                                         </div>
-                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                        <small>And some muted small print.</small>
+                                        <!-- <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some muted small print.</small> -->
                                     </a>
-                                    <a href="#" class="list-group-item list-group-item-action active"
+                                    <a href="http://127.0.0.1:8082" class="list-group-item list-group-item-action active"
                                         style="background: rgb(39, 39, 39); border-color:green; border-width: 2px; margin:2px;border-radius: 5px;">
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h5 class="mb-1" style="color: white">Modal 3</h5>
-                                            <small class="text-body-secondary">3 days ago</small>
+                                            <h5 class="mb-1" style="color: white">Brain-MRI-SCAN</h5>
+                                            <!-- <small class="text-body-secondary">3 days ago</small> -->
                                         </div>
-                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                        <small>And some muted small print.</small>
+                                        <!-- <p class="mb-1">Some placeholder content in a paragraph.</p> -->
+                                        <!-- <small>And some muted small print.</small> -->
                                     </a>
-                                    <a href="#" class="list-group-item list-group-item-action active"
+                                    <!-- <a href="#" class="list-group-item list-group-item-action active"
                                         style="background: rgb(39, 39, 39); border-color:green; border-width: 2px; margin:2px;border-radius: 5px;">
                                         <div class="d-flex w-100 justify-content-between">
                                             <h5 class="mb-1" style="color: white">Modal 4</h5>
@@ -82,8 +84,8 @@
                                             <small class="text-body-secondary">3 days ago</small>
                                         </div>
                                         <p class="mb-1">Some placeholder content in a paragraph.</p>
-                                        <small class="text-body-secondary">And some muted small print.</small>
-                                    </a>
+                                        <small class="text-body-secondary">And some muted small print.</small> -->
+                                    <!-- </a> -->
                                 </div>
                             </div>
                         </div>
@@ -137,8 +139,7 @@
                                             class="btn btn-info mt-3">Scheduel Appointment</a>
                                         <a href="/doctor/videoCall?did<%= did %>&name<%= name %>&role<%= role %>"
                                             class="btn btn-info mt-3">Connect on call</a>
-                                        <a href="/doctor/requestBlood/<%= did %>" class="btn btn-info mt-3">Connect on
-                                            call</a>
+                                        <a href="/doctor/requestBlood/<%= did %>" class="btn btn-info mt-3">Emergency Blood Request</a>
                                     </div>
                                 </div>
 
